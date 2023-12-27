@@ -1,0 +1,14 @@
+name: 'license-mate'
+
+services:
+
+  backend:
+    build:
+      context: ../../
+      dockerfile: docker/builds/dev-static.Dockerfile
+    image: license-mate:dev-static
+    container_name: backend
+    ports:
+      - '80:80'
+    env_file:
+      - ../../server/.env

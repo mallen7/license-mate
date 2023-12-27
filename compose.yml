@@ -1,0 +1,16 @@
+name: license-mate
+
+services:
+
+  backend:
+    image: yjpictures/license-mate:1.1
+    container_name: backend
+    ports:
+      - 80:80
+    environment:
+      MONGODB_URI: mongodb+srv://licenseusr:x4XtNHDJfPF8WWnhDQDmAUpn@licensemate.s81ytzs.mongodb.net/
+      ADMIN_PWD: x4XtNHDJfPF8WWnhDQDmAUpn
+      MANAGER_PWD: x4XtNHDJfPF8WWnhDQDmAUpn
+      CLIENT_PWD: x4XtNHDJfPF8WWnhDQDmAUpn
+      REQUIRED_CREATE: name, email, company, product, machine-node, machine-sn
+      UNIQUE_VALIDATE: email, machine-node, machine-sn
